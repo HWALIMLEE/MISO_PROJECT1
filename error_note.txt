@@ -1,0 +1,24 @@
+pyenv versions : 밑에 가상환경 확인하기
+pyenv activate <가상환경 이름> : 가상환경 접속
+jupyter kernelspec list : 주피터 커널 이름 확인
+jupyter kernelspec unnistall <커널 이름> : 커널 삭제
+
+**jupyterlab 명령어**
+1. 커널 추가하고 싶은 가상환경 먼저 들어가기
+2. ipykernel 라이브러리 설치하기
+>> pip insatll ipykernel
+3. jupyter notebook 가상환경안에 kernel설치하기
+>> python -m ipykernel insatll --user --name (가상환경 이름) --display-name (커널이름)
+4. jupyter notebook에 가상환경 kernel삭제하기
+>> jupyter kernelspec uninstall (가상환경 이름)
+>> 왜냐면 가상환경 밑에 커널 설치한거기 때문
+>> 이렇게 지워도 원래 가상환경은 지워지지 않음
+>> 가상환경 지울때는 remove이용함
+
+**리눅스 명령어 정리**
+>> history : 여태까지 썼던 코드 확인
+>> history | grep (내가 찾고 싶은 단어) : history안에 내가 찾고 싶은 단어가 포함된 명령어가 표시됨
+>> ls : 하위 파일 목록
+>> ll : 하위 파일 목록 + 용량
+>> nvcc -V : cuda 버전 확인
+>> nvidia-smi : 현재 GPU확인
