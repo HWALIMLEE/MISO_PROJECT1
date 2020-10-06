@@ -30,3 +30,7 @@ jupyter kernelspec unnistall <커널 이름> : 커널 삭제
 1. pyenv install anaconda3-5.3.1
 2. pyenv activate anaconda3-5.3.1 (활성화 시켜서 확인)
 3. pyenv virtualenv anaconda3-5.3.1 (가상환경 이름) >> 내가 만들고 싶은 가상환경 만들기
+
+
+**데이터 프레임 데이터 수정
+>> data['paragraphs'] = data['paragraphs'].apply(lambda x: x.split) : apply,lambda 써주기
