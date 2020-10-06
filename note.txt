@@ -24,6 +24,7 @@ jupyter kernelspec unnistall <커널 이름> : 커널 삭제
 >> nvidia-smi : 현재 GPU확인
 >> scp : 파일전송(다시 정리 필요)
 >> wget (링크) : 파일 다운로드
+>> cp (복사하고 싶은 파일 이름) (복사본 파일 이름) : 파일 그대로 이름만 바꿔서 복사할 수 있음
 
 **가상환경 만드는 법
 1. pyenv install anaconda3-5.3.1
