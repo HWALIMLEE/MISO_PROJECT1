@@ -1,0 +1,74 @@
+class MyProduct:
+    # 생성자 정의
+    def __init__(self, name,price, stock):
+        self.name = name
+        self.price = price
+        self.stock = stock
+        self.sales = 0
+    
+    # 구매 메서드
+    def buy_up(self,n):
+        self.stock+=n
+    
+    # 판매 메서드
+    def sell(self,n):
+        self.stock -= n
+        self.sales += n*self.price
+    
+    # 개요 메서드
+    def summary(self):
+        message = "called summary()." +\
+        "\n name:" + self.get_name() + \
+        "\n price:" + str(self.price) +\
+        "\n stock:" + str(self.stock) + \
+        "\n sales:" + str(self.sales) 
+        print(message)
+    
+    # name을 반환하는 get_name()작성
+    def get_name(self):
+        return self.name
+    
+    # 인수만큼 price를 줄이는 discount()작성
+    def discount(self,n):
+        self.price -= n
+
+
+# 객체로 받아오기
+# product1 = MyProduct("cake",50)
+# print(product1.name)
+
+product2 = MyProduct("phone",30000,100)
+product2.discount(5000)
+product2.summary()
+
+
+# 클래스(상속, 오버라이드, 슈퍼)
+class MyProductSalesTax(MyProduct):
+    # MyProductSaelsTax는 생성자의 네번째 인수가 소비세율을 받습니다.
+    def __init__(self, name,price, stock, tax_rate):
+        # super()를 사용하면 부모 클래스의 메서드 호출
+        # 여기서는 MyProduct()클래스의 생성자 호출
+        super().__init__(name,price,stock)
+        self.tax_rate = tax_rate
+
+    # MyProductSalesTax에서 MyProduct의 get_name을 재정의(오버라이드)합니다.
+    def get_name(self):
+        return self.name+ "(소비세포함)"
+        
+    # MyProductSalesTax에서 get_price_with_tax를 새로 구현합니다.
+    def get_price_with_tax(self):
+        return int(self.price*(1+self.tax_rate))
+
+    def summary(self):
+        message = "called summary()." +\
+        "\n name:" + self.get_name() + \
+        "\n price:" + str(self.get_price_with_tax()) +\
+        "\n stock:" + str(self.stock) + \
+        "\n sales:" + str(self.sales) 
+        print(message)
+        
+
+product3 = MyProductSalesTax("phone",30000,100,0.1)
+print(product3.get_name())
+print(product3.get_price_with_tax())
+product3.summary()
