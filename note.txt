@@ -22,7 +22,8 @@ jupyter kernelspec unnistall <커널 이름> : 커널 삭제
 >> ll : 하위 파일 목록 + 용량
 >> nvcc -V : cuda 버전 확인
 >> nvidia-smi : 현재 GPU확인
->> scp : 파일전송(다시 정리 필요)
+>> scp : jupyterLab ---> ssh [전송할파일][전송받을 서버 사용자명]@[전송받을 서버 ip]:[전송받을 서버의 Directory경로]
+   (scp Q_A_dataset_change.csv user05@misodev2:~/.pyenv/versions/nlpqaconda/Q_A_dataset.csv)
 >> wget (링크) : 파일 다운로드
 >> cp (복사하고 싶은 파일 이름) (복사본 파일 이름) : 파일 그대로 이름만 바꿔서 복사할 수 있음
 
