@@ -35,3 +35,13 @@ jupyter kernelspec unnistall <커널 이름> : 커널 삭제
 
 **데이터 프레임 데이터 수정
 >> data['paragraphs'] = data['paragraphs'].apply(lambda x: x.split) : apply,lambda 써주기
+
+**gpu 설정해주기
+>> Terminal에서 python code를 실행하는 경우
+$CUDA_VISIBLE_DEVICES=0 python my_script.py # Uses GPU 0
+$CUDA_VISIBLE_DEVICES=1 python my_script.py # Uses GPU 1
+#CUDA_VISIBLE_DIVICES=2,3 python my_script.py # Usese GPUs 2 ad 3.
+>> python code에 아래와 같은 코드 추가해도 됨
+import os
+os.environ["CUDA_DEVICE_ORDER"]='PCI_BUS_ID'
+os.environ["CUDA_VISIBLE_DEVICES"]='0'
