@@ -28,6 +28,8 @@ jupyter kernelspec unnistall <커널 이름> : 커널 삭제
    (scp Q_A_dataset_change.csv user05@misoinfornd.iptime.org:/home/user05/.pyenv/versions/nlpqaconda/Q_A_dataset.csv)
 >> wget (링크) : 파일 다운로드
 >> cp (복사하고 싶은 파일 이름) (복사본 파일 이름) : 파일 그대로 이름만 바꿔서 복사할 수 있음
+>> GPU clear : sudo kill -(id) pid 
+(RuntimeError: CUDA error: all CUDA-capable devices are busy or unavailable) <- 이 에러 뜰 때 사용
 
 **가상환경 만드는 법
 1. pyenv install anaconda3-5.3.1
