@@ -51,3 +51,14 @@ $CUDA_VISIBLE_DEVICES=1 python my_script.py # Uses GPU 1
 import os
 os.environ["CUDA_DEVICE_ORDER"]='PCI_BUS_ID'
 os.environ["CUDA_VISIBLE_DEVICES"]='0'
+
+
+**tensorflowt 설치하다가 wrapt 에러 뜰 때
+################################################
+pip install wrapt --upgrade --ignore-installed
+pip install tensorflow
+#################################################
+                  or
+#################################################                  
+             conda remove wrapt
+#################################################
