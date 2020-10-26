@@ -62,3 +62,21 @@ pip install tensorflow
 #################################################                  
              conda remove wrapt
 #################################################
+
+**screen 사용법
+
+# screen 확인
+screen -list --->리스트 확인
+
+# 새로운 세션 생성 및 접속(attach)
+screen -S {생성할 이름}
+screen -a {생성된 이름}
+또는
+screen -R {생성할 이름}
+
+# 세션 접속 상태에서 연결이 끊어졌는데 attach로 표시되는 경우
+# screen -R을 하면 같은 이름의 다른 세션이 새로 생성되므로 detach필요
+screen -D {attach 된 세션}
+screen -R {detach 된 세션}
+
+
