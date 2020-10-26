@@ -63,7 +63,7 @@ pip install tensorflow
              conda remove wrapt
 #################################################
 
-**screen 사용법
+**screen 사용법***
 
 # screen 확인
 screen -list --->리스트 확인
