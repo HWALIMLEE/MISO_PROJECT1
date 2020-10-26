@@ -11,7 +11,7 @@ jupyter kernelspec unnistall <커널 이름> : 커널 삭제
 >> python -m ipykernel insatll --user --name (가상환경 이름) --display-name (커널이름)
 4. jupyter notebook에 가상환경 kernel삭제하기
 >> jupyter kernelspec uninstall (가상환경 이름)
->> 왜냐면 가상환경 밑에 커널 설치한거기 때문
+>> 왜냐면 가상환경 밑에 커널 설치한것이기 때문
 >> 이렇게 지워도 원래 가상환경은 지워지지 않음
 >> 가상환경 지울때는 remove이용함
 
