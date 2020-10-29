@@ -79,4 +79,6 @@ screen -R {생성할 이름}
 screen -D {attach 된 세션}
 screen -R {detach 된 세션}
 
+##jupyter에서 하위 파일 용량 확인
+!ls -alh ./(확인하고 싶은 폴더)
 
