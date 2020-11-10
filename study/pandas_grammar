@@ -1,0 +1,9 @@
+# pandas column name 바꿀 때
+df.rename(columns={'기존':'바꾸고 싶은 이름'})
+
+# pandas 문자열에서 작은 따옴표 붙이고 싶을 때
+df['parargraphs'].apply(lambda x: f'\'{x}\'')
+
+# pandas column 삭제
+df.drop(['B','C'],axis=1)
+
