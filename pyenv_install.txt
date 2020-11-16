@@ -1,0 +1,19 @@
+Linux 설치
+1. git으로 아래와 같이 clone
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+2. 환경 설정
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profileㅍ
+3. 쉘 재가동
+$ exec "$SHELL"
+4. pyenv 설치 후에 
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git 
+5. virtualenv 에러날 때
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+6. 원하는 버전 설치
+pyenv install 3.7.6
+7. pyenv-virtualenv를 이용하여 가상환경 관리
+pyenev virtualenv 3.7.6 (가상환경 이름)
