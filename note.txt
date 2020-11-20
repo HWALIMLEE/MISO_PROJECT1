@@ -123,4 +123,5 @@ ex) rwxr-xr-x = 755
 마지막 3개 문자: other의 권한
 (r은 4, w=2, x=1) 더해서 7
 
-
+** jupyter-lab background 실행
+>> jupyter notebook &> /dev/null &
